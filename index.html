@@ -348,16 +348,14 @@
       </ul>
     </div>
 
-    <!-- CENTER: existing content -->
+    <!-- CENTER: main content -->
     <div class="countdown-wrapper">
-      <!-- American flag -->
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
         alt="American flag"
         class="flag"
       />
 
-      <!-- Jimmy's photo from the provided URL -->
       <img
         src="https://media.licdn.com/dms/image/v2/C4D03AQG2zzyzT4P69Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1524188189929?e=1773878400&v=beta&t=Nx-xRcDzU0fxo-sE0rBj_5WiTs9m6NahUjY14EBv5YQ"
         alt="Jimmy"
@@ -367,11 +365,9 @@
       <h1>Jimmy II: THE RETURN</h1>
       <p class="subtitle">Counting down the moments until Jimmy joins the London team.</p>
 
-      <!-- Rotating welcome messages -->
       <p id="welcome-rotator">Welcome to London, Jimmy!</p>
 
-      <!-- Countdown -->
-      <div class="time-container" id="countdown">
+      <div class="time-container">
         <div class="time-box">
           <div class="time-value" id="days">0</div>
           <div class="time-label">Days</div>
@@ -395,7 +391,6 @@
         Jimmy has arrived!
       </div>
 
-      <!-- Betting section -->
       <div class="bet-section">
         <h2>Place your bet</h2>
         <p style="font-size:0.8rem; color:#9ca3af; margin-bottom:0.6rem;">
@@ -417,10 +412,7 @@
           </div>
         </form>
 
-        <div class="bets-list" id="bets-list">
-          <!-- Bets table will be injected here -->
-        </div>
-
+        <div class="bets-list" id="bets-list"></div>
         <div class="winner-banner" id="winner-banner"></div>
       </div>
     </div>
@@ -475,9 +467,7 @@
   </div>
 
   <script>
-    // --- Countdown setup ---
-    // Set Jimmy's arrival date and time here (local time).
-    // Currently: April 2, 2026 at 17:30 local time
+    // -------- Countdown --------
     const targetDate = new Date("2026-04-02T17:30:00");
 
     const daysEl = document.getElementById("days");
@@ -487,7 +477,6 @@
     const finishedEl = document.getElementById("finished");
     const targetTextEl = document.getElementById("target-text");
 
-    // Show a readable target date
     targetTextEl.textContent = "Official arrival time: " + targetDate.toLocaleString();
 
     let timer;
@@ -504,7 +493,6 @@
         finishedEl.style.display = "block";
         clearInterval(timer);
 
-        // Confetti celebration
         if (typeof confetti === "function") {
           confetti({
             particleCount: 150,
@@ -513,7 +501,6 @@
           });
         }
 
-        // Evaluate bets once the countdown is done
         evaluateBets();
         return;
       }
@@ -533,7 +520,7 @@
     updateCountdown();
     timer = setInterval(updateCountdown, 1000);
 
-    // --- Rotating welcome messages ---
+    // -------- Rotating messages --------
     const messages = [
       "Welcome to London, Jimmy!",
       "Mind the gap, Jimmy.",
@@ -551,7 +538,7 @@
       rotatorEl.textContent = messages[msgIndex];
     }, 5000);
 
-    // --- Betting logic (date-only) ---
+    // -------- Betting (date only) --------
     const BETS_KEY = "jimmy_bets_v2_date_only";
 
     const betForm = document.getElementById("bet-form");
@@ -602,7 +589,7 @@
       const dateInput = document.getElementById("bettor-date");
 
       const name = nameInput.value.trim();
-      const dateStr = dateInput.value; // "YYYY-MM-DD"
+      const dateStr = dateInput.value; // YYYY-MM-DD
 
       if (!name || !dateStr) return;
 
@@ -613,10 +600,7 @@
       }
 
       const bets = loadBets();
-      bets.push({
-        name,
-        date: dateStr
-      });
+      bets.push({ name, date: dateStr });
       saveBets(bets);
       renderBets();
 
@@ -635,7 +619,6 @@
       const targetY = targetDate.getFullYear();
       const targetM = targetDate.getMonth();
       const targetD = targetDate.getDate();
-
       const targetMidnight = new Date(targetY, targetM, targetD);
 
       const exactWinners = [];
@@ -671,9 +654,9 @@
         winnerBannerEl.innerHTML =
           'Closest bet: <span class="winner-highlight">' +
           closest.bet.name +
-          "</span> with “" +
+          "</span> with “' +
           d.toLocaleDateString() +
-          "” (' +
+          "” (" +
           closest.diffDays.toFixed(0) +
           " day(s) away).";
       } else {
@@ -683,7 +666,7 @@
       winnerBannerEl.style.display = "block";
     }
 
-    // Initial render of bets on page load
+    // initial load of bets
     renderBets();
   </script>
 </body>
