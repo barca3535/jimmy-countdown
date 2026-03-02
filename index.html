@@ -4,14 +4,9 @@
   <meta charset="UTF-8" />
   <title>Jimmy II: THE RETURN</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Confetti library for celebration at the end -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       height: 100vh;
@@ -24,7 +19,6 @@
       color: #fff;
     }
 
-    /* Outer layout: US wall | center | UK wall */
     .page-layout {
       display: grid;
       grid-template-columns: minmax(150px, 220px) minmax(320px, 520px) minmax(150px, 220px);
@@ -58,23 +52,10 @@
       margin-bottom: 0.6rem;
     }
 
-    .culture-list {
-      list-style: none;
-    }
-
-    .culture-item {
-      margin-bottom: 0.6rem;
-    }
-
-    .culture-label {
-      font-weight: 600;
-      color: #facc15;
-      display: block;
-    }
-
-    .culture-value {
-      color: #e5e7eb;
-    }
+    .culture-list { list-style: none; }
+    .culture-item { margin-bottom: 0.6rem; }
+    .culture-label { font-weight: 600; color: #facc15; display: block; }
+    .culture-value { color: #e5e7eb; }
 
     .countdown-wrapper {
       text-align: center;
@@ -115,12 +96,11 @@
       color: #cfd8dc;
     }
 
-    /* Rotating welcome text - bigger and standout */
     #welcome-rotator {
       margin-bottom: 1.5rem;
       font-size: 1.2rem;
       font-weight: 600;
-      color: #fbbf24; /* amber */
+      color: #fbbf24;
       font-family: "Georgia", "Times New Roman", serif;
       text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
       min-height: 1.4em;
@@ -169,7 +149,6 @@
       display: none;
     }
 
-    /* Betting section */
     .bet-section {
       margin-top: 2rem;
       text-align: left;
@@ -282,19 +261,9 @@
       .countdown-wrapper {
         padding: 1.75rem 1.5rem;
       }
-
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      .time-value {
-        font-size: 1.5rem;
-      }
-
-      .bet-form {
-        flex-direction: column;
-        align-items: stretch;
-      }
+      h1 { font-size: 1.6rem; }
+      .time-value { font-size: 1.5rem; }
+      .bet-form { flex-direction: column; align-items: stretch; }
     }
   </style>
 </head>
@@ -305,62 +274,23 @@
       <div class="culture-title">In the US we say…</div>
       <div class="culture-subtitle">Jimmy’s native translation guide.</div>
       <ul class="culture-list">
-        <li class="culture-item">
-          <span class="culture-label">Fries</span>
-          <span class="culture-value">with a side of ketchup.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Apartment</span>
-          <span class="culture-value">in a cool neighborhood.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Vacation</span>
-          <span class="culture-value">time to unplug.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Elevator</span>
-          <span class="culture-value">to the next floor.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Soccer</span>
-          <span class="culture-value">on Sunday with friends.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Cookie</span>
-          <span class="culture-value">with chocolate chips.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Trash can</span>
-          <span class="culture-value">on the curb outside.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Fall</span>
-          <span class="culture-value">when the leaves change color.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Line</span>
-          <span class="culture-value">you wait your turn in.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Subway</span>
-          <span class="culture-value">to get across the city.</span>
-        </li>
+        <li class="culture-item"><span class="culture-label">Fries</span><span class="culture-value">with a side of ketchup.</span></li>
+        <li class="culture-item"><span class="culture-label">Apartment</span><span class="culture-value">in a cool neighborhood.</span></li>
+        <li class="culture-item"><span class="culture-label">Vacation</span><span class="culture-value">time to unplug.</span></li>
+        <li class="culture-item"><span class="culture-label">Elevator</span><span class="culture-value">to the next floor.</span></li>
+        <li class="culture-item"><span class="culture-label">Soccer</span><span class="culture-value">on Sunday with friends.</span></li>
+        <li class="culture-item"><span class="culture-label">Cookie</span><span class="culture-value">with chocolate chips.</span></li>
+        <li class="culture-item"><span class="culture-label">Trash can</span><span class="culture-value">on the curb outside.</span></li>
+        <li class="culture-item"><span class="culture-label">Fall</span><span class="culture-value">when the leaves change color.</span></li>
+        <li class="culture-item"><span class="culture-label">Line</span><span class="culture-value">you wait your turn in.</span></li>
+        <li class="culture-item"><span class="culture-label">Subway</span><span class="culture-value">to get across the city.</span></li>
       </ul>
     </div>
 
     <!-- CENTER: main content -->
     <div class="countdown-wrapper">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-        alt="American flag"
-        class="flag"
-      />
-
-      <img
-        src="https://media.licdn.com/dms/image/v2/C4D03AQG2zzyzT4P69Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1524188189929?e=1773878400&v=beta&t=Nx-xRcDzU0fxo-sE0rBj_5WiTs9m6NahUjY14EBv5YQ"
-        alt="Jimmy"
-        class="jimmy-photo"
-      />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="American flag" class="flag" />
+      <img src="https://media.licdn.com/dms/image/v2/C4D03AQG2zzyzT4P69Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1524188189929?e=1773878400&v=beta&t=Nx-xRcDzU0fxo-sE0rBj_5WiTs9m6NahUjY14EBv5YQ" alt="Jimmy" class="jimmy-photo" />
 
       <h1>Jimmy II: THE RETURN</h1>
       <p class="subtitle">Counting down the moments until Jimmy joins the London team.</p>
@@ -368,28 +298,14 @@
       <p id="welcome-rotator">Welcome to London, Jimmy!</p>
 
       <div class="time-container">
-        <div class="time-box">
-          <div class="time-value" id="days">0</div>
-          <div class="time-label">Days</div>
-        </div>
-        <div class="time-box">
-          <div class="time-value" id="hours">0</div>
-          <div class="time-label">Hours</div>
-        </div>
-        <div class="time-box">
-          <div class="time-value" id="minutes">0</div>
-          <div class="time-label">Minutes</div>
-        </div>
-        <div class="time-box">
-          <div class="time-value" id="seconds">0</div>
-          <div class="time-label">Seconds</div>
-        </div>
+        <div class="time-box"><div class="time-value" id="days">0</div><div class="time-label">Days</div></div>
+        <div class="time-box"><div class="time-value" id="hours">0</div><div class="time-label">Hours</div></div>
+        <div class="time-box"><div class="time-value" id="minutes">0</div><div class="time-label">Minutes</div></div>
+        <div class="time-box"><div class="time-value" id="seconds">0</div><div class="time-label">Seconds</div></div>
       </div>
 
       <div class="date-target" id="target-text"></div>
-      <div class="finished-message" id="finished">
-        Jimmy has arrived!
-      </div>
+      <div class="finished-message" id="finished">Jimmy has arrived!</div>
 
       <div class="bet-section">
         <h2>Place your bet</h2>
@@ -422,68 +338,40 @@
       <div class="culture-title">In the UK we say…</div>
       <div class="culture-subtitle">Jimmy’s new London vocabulary.</div>
       <ul class="culture-list">
-        <li class="culture-item">
-          <span class="culture-label">Chips</span>
-          <span class="culture-value">with a bit of tomato sauce.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Flat</span>
-          <span class="culture-value">in a lovely area.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Holiday</span>
-          <span class="culture-value">time to switch off.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Lift</span>
-          <span class="culture-value">up to the next floor.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Football</span>
-          <span class="culture-value">at the weekend.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Biscuit</span>
-          <span class="culture-value">with a cuppa.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Bin</span>
-          <span class="culture-value">at the end of the road.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Autumn</span>
-          <span class="culture-value">when the leaves change colour.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Queue</span>
-          <span class="culture-value">because we love order.</span>
-        </li>
-        <li class="culture-item">
-          <span class="culture-label">Tube</span>
-          <span class="culture-value">to get across London.</span>
-        </li>
+        <li class="culture-item"><span class="culture-label">Chips</span><span class="culture-value">with a bit of tomato sauce.</span></li>
+        <li class="culture-item"><span class="culture-label">Flat</span><span class="culture-value">in a lovely area.</span></li>
+        <li class="culture-item"><span class="culture-label">Holiday</span><span class="culture-value">time to switch off.</span></li>
+        <li class="culture-item"><span class="culture-label">Lift</span><span class="culture-value">up to the next floor.</span></li>
+        <li class="culture-item"><span class="culture-label">Football</span><span class="culture-value">at the weekend.</span></li>
+        <li class="culture-item"><span class="culture-label">Biscuit</span><span class="culture-value">with a cuppa.</span></li>
+        <li class="culture-item"><span class="culture-label">Bin</span><span class="culture-value">at the end of the road.</span></li>
+        <li class="culture-item"><span class="culture-label">Autumn</span><span class="culture-value">when the leaves change colour.</span></li>
+        <li class="culture-item"><span class="culture-label">Queue</span><span class="culture-value">because we love order.</span></li>
+        <li class="culture-item"><span class="culture-label">Tube</span><span class="culture-value">to get across London.</span></li>
       </ul>
     </div>
   </div>
 
   <script>
-    // -------- Countdown --------
-    const targetDate = new Date("2026-04-02T17:30:00");
+    // June 1, 2026, 09:00 local time
+    var targetDate = new Date(2026, 5, 1, 9, 0, 0);
 
-    const daysEl = document.getElementById("days");
-    const hoursEl = document.getElementById("hours");
-    const minutesEl = document.getElementById("minutes");
-    const secondsEl = document.getElementById("seconds");
-    const finishedEl = document.getElementById("finished");
-    const targetTextEl = document.getElementById("target-text");
+    var daysEl = document.getElementById("days");
+    var hoursEl = document.getElementById("hours");
+    var minutesEl = document.getElementById("minutes");
+    var secondsEl = document.getElementById("seconds");
+    var finishedEl = document.getElementById("finished");
+    var targetTextEl = document.getElementById("target-text");
 
-    targetTextEl.textContent = "Official arrival time: " + targetDate.toLocaleString();
-
-    let timer;
+    if (!isNaN(targetDate.getTime())) {
+      targetTextEl.textContent = "Official arrival time: " + targetDate.toLocaleString();
+    } else {
+      targetTextEl.textContent = "Error: target date is invalid.";
+    }
 
     function updateCountdown() {
-      const now = new Date();
-      const diff = targetDate - now;
+      var now = new Date();
+      var diff = targetDate.getTime() - now.getTime();
 
       if (diff <= 0) {
         daysEl.textContent = "0";
@@ -491,37 +379,32 @@
         minutesEl.textContent = "0";
         secondsEl.textContent = "0";
         finishedEl.style.display = "block";
-        clearInterval(timer);
 
         if (typeof confetti === "function") {
-          confetti({
-            particleCount: 150,
-            spread: 70,
-            origin: { y: 0.7 }
-          });
+          confetti({ particleCount: 150, spread: 70, origin: { y: 0.7 } });
         }
 
         evaluateBets();
         return;
       }
 
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / (3600 * 24));
-      const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const secs = totalSeconds % 60;
+      var totalSeconds = Math.floor(diff / 1000);
+      var days = Math.floor(totalSeconds / (24 * 3600));
+      var hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+      var minutes = Math.floor((totalSeconds % 3600) / 60);
+      var secs = totalSeconds % 60;
 
       daysEl.textContent = days;
-      hoursEl.textContent = hours.toString().padStart(2, "0");
-      minutesEl.textContent = minutes.toString().padStart(2, "0");
-      secondsEl.textContent = secs.toString().padStart(2, "0");
+      hoursEl.textContent = ("0" + hours).slice(-2);
+      minutesEl.textContent = ("0" + minutes).slice(-2);
+      secondsEl.textContent = ("0" + secs).slice(-2);
     }
 
     updateCountdown();
-    timer = setInterval(updateCountdown, 1000);
+    setInterval(updateCountdown, 1000);
 
-    // -------- Rotating messages --------
-    const messages = [
+    // Rotating welcome messages
+    var messages = [
       "Welcome to London, Jimmy!",
       "Mind the gap, Jimmy.",
       "From the US to the UK – Level Up!",
@@ -529,30 +412,26 @@
       "New chapter, new team – we’re ready for you.",
       "Don’t worry, we’ll translate the British idioms."
     ];
-
-    const rotatorEl = document.getElementById("welcome-rotator");
-    let msgIndex = 0;
-
-    setInterval(() => {
+    var rotatorEl = document.getElementById("welcome-rotator");
+    var msgIndex = 0;
+    setInterval(function () {
       msgIndex = (msgIndex + 1) % messages.length;
       rotatorEl.textContent = messages[msgIndex];
     }, 5000);
 
-    // -------- Betting (date only) --------
-    const BETS_KEY = "jimmy_bets_v2_date_only";
-
-    const betForm = document.getElementById("bet-form");
-    const betsListEl = document.getElementById("bets-list");
-    const winnerBannerEl = document.getElementById("winner-banner");
+    // Betting (date only)
+    var BETS_KEY = "jimmy_bets_v2_date_only";
+    var betForm = document.getElementById("bet-form");
+    var betsListEl = document.getElementById("bets-list");
+    var winnerBannerEl = document.getElementById("winner-banner");
 
     function loadBets() {
       try {
-        const raw = localStorage.getItem(BETS_KEY);
+        var raw = localStorage.getItem(BETS_KEY);
         if (!raw) return [];
-        const parsed = JSON.parse(raw);
+        var parsed = JSON.parse(raw);
         return Array.isArray(parsed) ? parsed : [];
       } catch (e) {
-        console.error("Error loading bets:", e);
         return [];
       }
     }
@@ -562,71 +441,59 @@
     }
 
     function renderBets() {
-      const bets = loadBets();
+      var bets = loadBets();
       if (!bets.length) {
         betsListEl.innerHTML =
           '<p style="font-size:0.8rem; color:#9ca3af;">No bets yet. Be the first!</p>';
         return;
       }
-
-      let html = "<table><thead><tr><th>Name</th><th>Guessed date</th></tr></thead><tbody>";
-      bets.forEach((bet) => {
-        const d = new Date(bet.date + "T00:00:00");
-        html += `<tr>
-          <td>${bet.name}</td>
-          <td>${d.toLocaleDateString()}</td>
-        </tr>`;
+      var html = "<table><thead><tr><th>Name</th><th>Guessed date</th></tr></thead><tbody>";
+      bets.forEach(function (bet) {
+        var d = new Date(bet.date + "T00:00:00");
+        html += "<tr><td>" + bet.name + "</td><td>" + d.toLocaleDateString() + "</td></tr>";
       });
       html += "</tbody></table>";
-
       betsListEl.innerHTML = html;
     }
 
-    betForm.addEventListener("submit", (e) => {
+    betForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
-      const nameInput = document.getElementById("bettor-name");
-      const dateInput = document.getElementById("bettor-date");
-
-      const name = nameInput.value.trim();
-      const dateStr = dateInput.value; // YYYY-MM-DD
-
+      var nameInput = document.getElementById("bettor-name");
+      var dateInput = document.getElementById("bettor-date");
+      var name = nameInput.value.trim();
+      var dateStr = dateInput.value;
       if (!name || !dateStr) return;
-
-      const guessedDate = new Date(dateStr + "T00:00:00");
+      var guessedDate = new Date(dateStr + "T00:00:00");
       if (isNaN(guessedDate.getTime())) {
         alert("Please enter a valid date.");
         return;
       }
-
-      const bets = loadBets();
-      bets.push({ name, date: dateStr });
+      var bets = loadBets();
+      bets.push({ name: name, date: dateStr });
       saveBets(bets);
       renderBets();
-
       nameInput.value = "";
       dateInput.value = "";
     });
 
     function evaluateBets() {
-      const bets = loadBets();
+      var bets = loadBets();
       if (!bets.length) {
         winnerBannerEl.textContent = "No bets were placed.";
         winnerBannerEl.style.display = "block";
         return;
       }
+      var targetY = targetDate.getFullYear();
+      var targetM = targetDate.getMonth();
+      var targetD = targetDate.getDate();
+      var targetMidnight = new Date(targetY, targetM, targetD);
 
-      const targetY = targetDate.getFullYear();
-      const targetM = targetDate.getMonth();
-      const targetD = targetDate.getDate();
-      const targetMidnight = new Date(targetY, targetM, targetD);
+      var exactWinners = [];
+      var closest = null;
 
-      const exactWinners = [];
-      let closest = null;
-
-      bets.forEach((bet) => {
-        const d = new Date(bet.date + "T00:00:00");
-        const diffDays = Math.abs(
+      bets.forEach(function (bet) {
+        var d = new Date(bet.date + "T00:00:00");
+        var diffDays = Math.abs(
           (d.getTime() - targetMidnight.getTime()) / (1000 * 60 * 60 * 24)
         );
 
@@ -639,34 +506,32 @@
         }
 
         if (!closest || diffDays < closest.diffDays) {
-          closest = { bet, diffDays };
+          closest = { bet: bet, diffDays: diffDays };
         }
       });
 
       if (exactWinners.length) {
-        const names = exactWinners.map((b) => b.name).join(", ");
+        var names = exactWinners.map(function (b) { return b.name; }).join(", ");
         winnerBannerEl.innerHTML =
           'Winners: <span class="winner-highlight">' +
           names +
           "</span> picked the correct date!";
       } else if (closest) {
-        const d = new Date(closest.bet.date + "T00:00:00");
+        var d2 = new Date(closest.bet.date + "T00:00:00");
         winnerBannerEl.innerHTML =
           'Closest bet: <span class="winner-highlight">' +
           closest.bet.name +
-          "</span> with “' +
-          d.toLocaleDateString() +
+          "</span> with “" +
+          d2.toLocaleDateString() +
           "” (" +
           closest.diffDays.toFixed(0) +
           " day(s) away).";
       } else {
         winnerBannerEl.textContent = "No valid bets found.";
       }
-
       winnerBannerEl.style.display = "block";
     }
 
-    // initial load of bets
     renderBets();
   </script>
 </body>
